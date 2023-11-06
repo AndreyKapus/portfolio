@@ -1,14 +1,18 @@
 import Link from "next/link";
+import Head from "next/head";
 
 const Index = () => {
   return (
     <div>
-      <Link href="/">
-        <p>Next app</p>
-      </Link>
-      <Link href="/users">
-        <p>Users</p>
-      </Link>
+      <Head>
+        <title>Portfolio</title>
+      </Head>
+      <p>
+        <Link href={"/"}>Projects</Link>
+      </p>
+      <p>
+        <Link href={"/users"}>Add project</Link>
+      </p>
     </div>
   );
 };

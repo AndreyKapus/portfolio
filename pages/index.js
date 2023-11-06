@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Head from "next/head";
+import ProjectsList from "./ProjectsList/ProjectsList";
 
 const Index = () => {
   return (
@@ -7,11 +8,14 @@ const Index = () => {
       <Head>
         <title>Portfolio</title>
       </Head>
+      <h1>
+        <Link href={"/"}>Portfolio</Link>
+      </h1>
+      <div>
+        <Link href={"/Contacts/contacts"}>Contacts</Link>
+      </div>
       <p>
-        <Link href={"/"}>Projects</Link>
-      </p>
-      <p>
-        <Link href={"/users"}>Add project</Link>
+        <ProjectsList />
       </p>
     </div>
   );

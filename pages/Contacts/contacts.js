@@ -2,7 +2,7 @@ import Layout from "../../Components/layout";
 
 const Contacts = () => {
   return (
-    <Layout>
+    <Layout title={"contacts"}>
       <ul>
         <li>Linkedin</li>
         <li>Github</li>

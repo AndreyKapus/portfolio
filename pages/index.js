@@ -6,10 +6,6 @@ import Layout from "../Components/layout";
 const Index = () => {
   return (
     <Layout>
-      <Head>
-        <title>Portfolio</title>
-      </Head>
-
       <ProjectsList />
     </Layout>
   );

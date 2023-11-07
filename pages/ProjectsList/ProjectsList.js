@@ -1,3 +1,5 @@
+import Layout from "../../Components/layout";
+
 const ProjectsList = () => {
   return (
     <div>

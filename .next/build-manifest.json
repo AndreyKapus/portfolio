@@ -17,10 +17,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/index.js"
     ],
-    "/404": [
+    "/Contacts/contacts": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/404.js"
+      "static/chunks/pages/Contacts/contacts.js"
     ],
     "/_app": [
       "static/chunks/webpack.js",

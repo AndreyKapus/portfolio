@@ -1,8 +1,10 @@
+import "../styles/main.css";
+
 const MyApp = ({ Component, pageProps }) => {
   return (
     <>
       <Component {...pageProps} />
-      <style jsx global>{`
+      {/* <style jsx global>{`
         body {
           font-family: "Montserrat", sans-serif;
           background-color: #343434;
@@ -20,7 +22,7 @@ const MyApp = ({ Component, pageProps }) => {
         p {
           margin: 0px;
         }
-      `}</style>
+      `}</style> */}
     </>
   );
 };

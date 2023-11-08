@@ -1,5 +1,5 @@
 import Link from "next/link";
-import styles from "../styles/error.module.css";
+import styles from "../styles/error.module.scss";
 
 const ErrorPage = () => {
   return (

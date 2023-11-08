@@ -1,11 +1,17 @@
 import Link from "next/link";
+import styles from "../styles/error.module.css";
 
 const ErrorPage = () => {
   return (
-    <>
-      <h1>Error 404. Page not found</h1>
-      Please, <Link href={"/"}>go back to main page</Link>
-    </>
+    <div className={styles.errorContainer}>
+      <h1 className={styles.errorTitle}>Error 404. Page not found</h1>
+      <p className={styles.text}>
+        Please,{" "}
+        <Link className={styles.link} href={"/"}>
+          go back to main page
+        </Link>
+      </p>
+    </div>
   );
 };
 

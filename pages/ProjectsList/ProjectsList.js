@@ -1,5 +1,6 @@
 import Layout from "../../Components/layout";
 import projects from "../../Components/Projects/projects.json";
+import BackeryMain from "../../Components/images/bakeryMain";
 
 const ProjectsList = () => {
   const { title, techs, descr, img } = projects;
@@ -8,7 +9,9 @@ const ProjectsList = () => {
     <div>
       <ul>
         <li>
-          <p>{img}</p>
+          <p>
+            <BackeryMain />
+          </p>
           <h2>{title}</h2>
           <p>{techs}</p>
           <p>{descr}</p>

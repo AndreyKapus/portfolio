@@ -9,9 +9,7 @@ const ProjectsList = () => {
     <div>
       <ul>
         <li>
-          <p>
-            <BackeryMain />
-          </p>
+          <p></p>
           <h2>{title}</h2>
           <p>{techs}</p>
           <p>{descr}</p>

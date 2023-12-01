@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Head from "next/head";
-import ProjectsList from "./ProjectsList/ProjectsList";
 import Layout from "../Components/layout";
+import ProjectsList from "./ProjectsList/ProjectsList";
 
 const Index = () => {
   return (

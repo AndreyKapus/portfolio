@@ -1,10 +1,10 @@
 import Layout from "../../Components/layout";
 import Projects from "../../Components/projects";
 
-const ProjectsList = () => {
+const ProjectsList = ({ projects }) => {
   return (
     <div>
-      <Projects />
+      <Projects projects={projects} />
     </div>
   );
 };

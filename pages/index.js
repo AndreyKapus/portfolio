@@ -8,6 +8,7 @@ export async function getStaticProps() {
     "https://portfolio-api-a758.onrender.com/api/projects"
   );
   const projects = await res.json();
+
   return {
     props: { projects },
   };

@@ -2,6 +2,7 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
+  "/Contacts/contacts": "pages/Contacts/contacts.js",
   "/": "pages/index.js",
-  "/404": "pages/404.js"
+  "/AddContact/addProject": "pages/AddContact/addProject.js"
 }

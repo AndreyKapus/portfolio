@@ -20,6 +20,9 @@ const Layout = ({ children, title = "Portfolio" }) => {
               Contacts
             </Link>
           </p>
+          <p>
+            <Link href={"/AddContact/addProject"}>Add project</Link>
+          </p>
         </nav>
       </div>
       <main>{children}</main>

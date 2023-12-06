@@ -10,6 +10,7 @@ const AddProjectModal = () => {
       left: "50%",
       right: "auto",
       bottom: "auto",
+      width: "60%",
       marginRight: "-50%",
       transform: "translate(-50%, -50%)",
       backgroundColor: "#343434",
@@ -38,7 +39,9 @@ const AddProjectModal = () => {
         onRequestClose={closeModal}
         style={customStyles}
       >
-        <button onClick={closeModal}>close</button>
+        <button onClick={closeModal} className={styles.closeModalBtn}>
+          close
+        </button>
         <AddProject />
       </Modal>
     </div>

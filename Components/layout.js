@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import styles from "../styles/layout.module.scss";
-import AddProjectBtn from "./addProjectBtn";
+import AddProjectModal from "./addProjectModal";
 
 const Layout = ({ children, title = "Portfolio" }) => {
   return (
@@ -25,7 +25,7 @@ const Layout = ({ children, title = "Portfolio" }) => {
             <Link href={"/AddContact/addProject"}>Add project</Link>
           </p> */}
         </nav>
-        <AddProjectBtn />
+        <AddProjectModal />
       </div>
       <main>{children}</main>
     </>

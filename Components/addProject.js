@@ -4,14 +4,14 @@ const AddProject = () => {
   return (
     <div className={styles.addContainer}>
       <form className={styles.addForm}>
-        <label>Title</label>
-        <input type="text" />
-        <label>Technologies</label>
-        <input type="text" />
-        <label>description</label>
-        <input type="text" />
-        <label>Team project</label>
-        <input type="checkbox" />
+        <label for="title">Title</label>
+        <input type="text" id="title" />
+        <label for="techs">Technologies</label>
+        <input type="text" id="techs" />
+        <label for="descr">description</label>
+        <input type="text" id="descr" />
+        <label for="checkbox">Team project</label>
+        <input type="checkbox" id="checkbox" />
         <button type="submit">Add project</button>
       </form>
     </div>

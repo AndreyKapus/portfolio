@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
-import styles from "../styles/layout.module.scss";
+import styles from "../styles/components/layout.module.css";
 import AddProjectModal from "./addProjectModal";
 
 const Layout = ({ children, title = "Portfolio" }) => {
@@ -21,9 +21,6 @@ const Layout = ({ children, title = "Portfolio" }) => {
               Contacts
             </Link>
           </p>
-          {/* <p>
-            <Link href={"/AddContact/addProject"}>Add project</Link>
-          </p> */}
         </nav>
         <AddProjectModal />
       </div>

@@ -1,4 +1,4 @@
-import styles from "../styles/projects.module.scss";
+import styles from "../styles/components/projects.module.css";
 
 const dir = "https://portfolio-api-a758.onrender.com/";
 

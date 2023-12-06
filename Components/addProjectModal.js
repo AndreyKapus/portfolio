@@ -1,6 +1,6 @@
 import Modal from "react-modal";
 import { useState } from "react";
-import styles from "../styles/layout.module.scss";
+import styles from "../styles/components/layout.module.css";
 import AddProject from "./addProject";
 
 const AddProjectModal = () => {
@@ -12,20 +12,16 @@ const AddProjectModal = () => {
       bottom: "auto",
       marginRight: "-50%",
       transform: "translate(-50%, -50%)",
+      backgroundColor: "#343434",
     },
   };
 
   Modal.setAppElement("body");
 
-  let subtitle;
   const [modalIsOpen, setIsOpen] = useState(false);
 
   function openModal() {
     setIsOpen(true);
-  }
-
-  function afterOpenModal() {
-    subtitle.style.color = "#f00";
   }
 
   function closeModal() {
@@ -39,12 +35,9 @@ const AddProjectModal = () => {
       </button>
       <Modal
         isOpen={modalIsOpen}
-        onAfterOpen={afterOpenModal}
         onRequestClose={closeModal}
         style={customStyles}
-        contentLabel="Example Modal"
       >
-        <h2 ref={(_subtitle) => (subtitle = _subtitle)}>Hello</h2>
         <button onClick={closeModal}>close</button>
         <AddProject />
       </Modal>

@@ -1,4 +1,4 @@
-import "../styles/main.scss";
+import "../styles/main.css";
 
 const MyApp = ({ Component, pageProps }) => {
   return (

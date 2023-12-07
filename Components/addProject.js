@@ -4,15 +4,15 @@ const AddProject = () => {
   return (
     <div className={styles.addContainer}>
       <form className={styles.addForm}>
-        <label for="title" className={styles.formLabel}>
+        <label htmlFor="title" className={styles.formLabel}>
           Title
         </label>
         <input type="text" id="title" className={styles.input} />
-        <label for="techs" className={styles.formLabel}>
+        <label htmlFor="techs" className={styles.formLabel}>
           Technologies
         </label>
         <input type="text" id="techs" className={styles.input} />
-        <label for="descr" className={styles.formLabel}>
+        <label htmlFor="descr" className={styles.formLabel}>
           description
         </label>
         <textarea
@@ -22,7 +22,7 @@ const AddProject = () => {
           id="descr"
           className={styles.textarea}
         />
-        <label for="checkbox" className={styles.formLabel}>
+        <label htmlFor="checkbox" className={styles.formLabel}>
           Team project
         </label>
         <input type="checkbox" id="checkbox" />

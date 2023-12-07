@@ -2,6 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import styles from "../styles/components/layout.module.css";
 import AddProjectModal from "./addProjectModal";
+import LogInModal from "./logInModal";
 
 const Layout = ({ children, title = "Portfolio" }) => {
   return (
@@ -22,7 +23,10 @@ const Layout = ({ children, title = "Portfolio" }) => {
             </Link>
           </p>
         </nav>
-        <AddProjectModal />
+        <div className={styles.controlWrapper}>
+          <AddProjectModal />
+          <LogInModal />
+        </div>
       </div>
       <main>{children}</main>
     </>

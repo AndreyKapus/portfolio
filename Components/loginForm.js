@@ -1,9 +1,13 @@
 import { useState } from "react";
 import styles from "../styles/components/logIn.module.css";
+import { useAuth } from "../store";
+import axios from "axios";
 
 const LoginForm = () => {
-  const [emali, setEmail] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  const logIn = useAuth((state) => state.logInUser);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -20,13 +24,15 @@ const LoginForm = () => {
     }
   };
 
-  const handleSubmit = () => {
-    e.preventDefalt();
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
     const event = {
-      emali,
+      email,
       password,
     };
+
+    logIn(event);
   };
 
   return (

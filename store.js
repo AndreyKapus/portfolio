@@ -1,6 +1,17 @@
 import { create } from "zustand";
 import axios from "axios";
 
+axios.defaults.baseURL = "https://portfolio-api-a758.onrender.com/";
+
+const token = {
+  setToken(token) {
+    axios.defaults.headers.common.Authorization = `Bearer ${token}`;
+  },
+  unsetToken() {
+    axios.defaults.headers.common.Authorization = "";
+  },
+};
+
 export const useAuth = create((set) => ({
   user: null,
   loading: false,
@@ -10,15 +21,37 @@ export const useAuth = create((set) => ({
     set({ loading: true });
 
     try {
-      const response = await axios.post(
-        "https://portfolio-api-a758.onrender.com/api/auth/login",
-        event
-      );
+      const res = await axios.post("api/auth/login", event);
 
       if (!res.ok) {
-        throw new Error("Fail");
+        throw new Error("Someting went wrong (");
       }
+      setToken(res.token);
       set({ user: res, error: null });
+    } catch (error) {
+      set({ error: error.massege });
+    } finally {
+      set({ loading: false });
+    }
+  },
+}));
+
+export const useProjects = create((set, get) => ({
+  project: null,
+  loading: false,
+  error: null,
+
+  addProject: async (event) => {
+    set({ loading: true });
+
+    try {
+      const res = await axios.post("api/projects", event);
+
+      if (!res.ok) {
+        throw new Error("Someting went wrong (");
+      }
+
+      set({ project: res, error: null });
     } catch (error) {
       set({ error: error.massege });
     } finally {

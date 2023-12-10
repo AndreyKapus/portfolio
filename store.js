@@ -3,7 +3,7 @@ import axios from "axios";
 
 axios.defaults.baseURL = "https://portfolio-api-a758.onrender.com/";
 
-const token = {
+export const token = {
   setToken(token) {
     axios.defaults.headers.common.Authorization = `Bearer ${token}`;
   },
@@ -22,16 +22,18 @@ export const useAuth = create((set) => ({
 
     try {
       const res = await axios.post("api/auth/login", event);
-
+      console.log(res);
       if (!res.ok) {
         throw new Error("Someting went wrong (");
       }
-      setToken(res.token);
-      set({ user: res, error: null });
+
+      set({ user: res.data, error: null });
+      token.setToken(res.data.token);
     } catch (error) {
       set({ error: error.massege });
     } finally {
       set({ loading: false });
+      console.log(axios.defaults);
     }
   },
 }));

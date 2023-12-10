@@ -69,6 +69,7 @@ const AddProject = () => {
           description
         </label>
         <textarea
+          type="text"
           name="textarea"
           rows="10"
           cols="5"

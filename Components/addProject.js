@@ -3,7 +3,7 @@ import styles from "../styles/components/addProject.module.css";
 import { useProjects } from "../store";
 
 const AddProject = () => {
-  const [title, setTitle] = useState("");
+  const [name, setName] = useState("");
   const [techs, setTechs] = useState("");
   const [descr, setDescr] = useState("");
   const [team, setTeam] = useState(false);
@@ -14,8 +14,8 @@ const AddProject = () => {
     const { name, value } = e.target;
 
     switch (name) {
-      case "title":
-        setTitle(value);
+      case "name":
+        setName(value);
         break;
       case "techs":
         setTechs(value);
@@ -29,7 +29,7 @@ const AddProject = () => {
     e.preventDefault();
 
     const event = {
-      title,
+      name,
       techs,
       descr,
       team,
@@ -51,7 +51,7 @@ const AddProject = () => {
         <input
           type="text"
           id="title"
-          name="title"
+          name="name"
           className={styles.input}
           onChange={handleChange}
         />
@@ -70,7 +70,7 @@ const AddProject = () => {
         </label>
         <textarea
           type="text"
-          name="textarea"
+          name="descr"
           rows="10"
           cols="5"
           id="descr"

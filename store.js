@@ -54,7 +54,10 @@ export const useProjects = create((set, get) => ({
     set({ loading: true });
 
     try {
-      const { data } = await axios.post("api/projects", event);
+      const { data } = await axios.post("api/projects", {
+        body: event,
+        Authorization: user.token,
+      });
 
       // if (!data.ok) {
       //   throw new Error("Someting went wrong (");

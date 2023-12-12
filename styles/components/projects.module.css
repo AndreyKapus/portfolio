@@ -4,17 +4,17 @@
 
 .projectsList {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   margin-top: 0px;
   padding: 0px;
-
+  flex-wrap: wrap;
   gap: 20px;
 }
 
 .listItem {
   border: 1px solid #7761ff;
-  flex-basis: calc((100% - 20px) / 3);
+  flex-basis: calc((100% - 40px) / 3);
   height: 500px;
   border-radius: 10px;
   box-shadow: 0px 1px 4px 2px #7761ff, 0px 1px 4px 0px #7761ff,

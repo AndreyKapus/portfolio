@@ -32,7 +32,7 @@ const LogInModal = () => {
 
   return (
     <div>
-      <button type="button" onClick={openModal}>
+      <button className={styles.logInBtn} type="button" onClick={openModal}>
         Log in
       </button>
       <Modal

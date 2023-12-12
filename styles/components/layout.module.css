@@ -1,22 +1,20 @@
 .container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
+  padding: 20px;
   border-bottom: 1px solid #f5f5f5;
 }
 
 .navigation {
   display: flex;
   align-items: baseline;
-  padding-top: 16px;
-  padding-bottom: 16px;
 }
 
 .mainTitle {
   text-decoration: none;
   color: #f5f5f5;
   font-size: 30px;
-  margin-left: 20px;
   border-bottom: 2px solid #7761ff;
   cursor: pointer;
 }
@@ -32,40 +30,61 @@
   margin-left: 30px;
   font-size: 20px;
   cursor: pointer;
-  padding: 5px 10px 5px 10px;
-  border-radius: 5px;
-
-  transition-property: box-shadow, color;
-  transition-duration: 250ms;
-  transition-timing-function: linear;
 }
 
-.contactsLink:hover {
-  color: #7761ff;
-  box-shadow: 0px 1px 4px 2px #7761ff, 0px 1px 4px 0px #7761ff,
-    0px 4px 8px 0px #7761ff, 0px 4px 8px 0px #7761ff;
+.contactsLink {
+  position: relative;
+}
+
+.contactsLink::after {
+  content: "";
+  position: absolute;
+  width: 0px;
+}
+
+.contactsLink::after {
+  right: 0px;
+  bottom: -4px;
+  border-bottom: 2px solid #7761ff;
+  transition: 0.3s ease-in-out;
+}
+
+.contactsLink:hover::after {
+  width: calc(100% + 0px);
+  height: calc(100% + 0px);
 }
 
 .addBtn {
   background-color: transparent;
   border: none;
   color: #f5f5f5;
-  margin-left: 30px;
+  margin-right: 30px;
+  padding: 0px;
   font-size: 20px;
   font-family: "Montserrat", sans-serif;
   cursor: pointer;
-  padding: 5px 10px 5px 10px;
-  border-radius: 5px;
-
-  transition-property: box-shadow, color;
-  transition-duration: 250ms;
-  transition-timing-function: linear;
 }
 
-.addBtn:hover {
-  color: #7761ff;
-  box-shadow: 0px 1px 4px 2px #7761ff, 0px 1px 4px 0px #7761ff,
-    0px 4px 8px 0px #7761ff, 0px 4px 8px 0px #7761ff;
+.addBtn {
+  position: relative;
+}
+
+.addBtn::after {
+  content: "";
+  position: absolute;
+  width: 0px;
+}
+
+.addBtn::after {
+  right: 0px;
+  bottom: -4px;
+  border-bottom: 2px solid #7761ff;
+  transition: 0.3s ease-in-out;
+}
+
+.addBtn:hover::after {
+  width: calc(100% + 0px);
+  height: calc(100% + 0px);
 }
 
 .closeModalBtn {

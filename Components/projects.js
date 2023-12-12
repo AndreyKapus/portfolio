@@ -11,9 +11,14 @@ const Projects = ({ projects }) => {
             <li key={_id} className={styles.listItem}>
               <img src={`${dir}${avatarUrl}`} className={styles.projectImg} />
               <div className={styles.descriptionWrapper}>
-                <h2>{name}</h2>
-                <p>{descr}</p>
-                <p>{techs}</p>
+                <h2 className={styles.projectTitle}>{name}</h2>
+                <p className={styles.techs}>
+                  <span className={styles.techTitle}>Technologies:</span>{" "}
+                  {techs}
+                </p>
+                <div className={styles.descriptionContainer}>
+                  <p className={styles.description}>{descr}</p>
+                </div>
               </div>
             </li>
           ))}

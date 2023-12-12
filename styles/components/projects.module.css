@@ -17,6 +17,7 @@
   flex-basis: calc((100% - 40px) / 3);
   height: 500px;
   border-radius: 10px;
+  overflow: hidden;
   box-shadow: 0px 1px 4px 2px #7761ff, 0px 1px 4px 0px #7761ff,
     0px 4px 8px 0px #7761ff, 0px 4px 8px 0px #7761ff;
 }
@@ -28,4 +29,30 @@
 .projectImg {
   width: 100%;
   border-radius: 10px 10px 0px 0px;
+}
+
+.projectTitle {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: #7761ff;
+  border-bottom: 2px solid #7761ff;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.techTitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: #7761ff;
+}
+
+.techs {
+  margin-bottom: 14px;
+  font-size: 14px;
+}
+
+.descriptionContainer {
+  padding: 10px;
+  border: 1px solid #7761ff;
+  border-radius: 5px;
 }

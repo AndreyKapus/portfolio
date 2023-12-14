@@ -43,7 +43,7 @@ const LogInModal = () => {
         <button onClick={closeModal} className={styles.closeModalBtn}>
           <IoClose className={styles.closeIcon} />
         </button>
-        <LoginForm />
+        <LoginForm closeModal={closeModal} />
       </Modal>
     </div>
   );

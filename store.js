@@ -56,9 +56,9 @@ export const useProjects = create((set, get) => ({
     try {
       const { data } = await axios.post("api/projects", event);
 
-      // if (!data.ok) {
-      //   throw new Error("Someting went wrong (");
-      // }
+      if (!data.ok) {
+        throw new Error("Someting went wrong (");
+      }
       set({ project: data, error: null });
     } catch (error) {
       set({ error: error.massege });

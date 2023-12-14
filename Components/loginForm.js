@@ -3,7 +3,7 @@ import styles from "../styles/components/logIn.module.css";
 import { useAuth } from "../store";
 import axios from "axios";
 
-const LoginForm = () => {
+const LoginForm = ({ closeModal }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -33,6 +33,7 @@ const LoginForm = () => {
     };
 
     logIn(event);
+    closeModal();
   };
 
   return (

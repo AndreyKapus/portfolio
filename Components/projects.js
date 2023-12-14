@@ -1,4 +1,5 @@
 import styles from "../styles/components/projects.module.css";
+import DetailsBtn from "./detailsBtn";
 
 const dir = "https://portfolio-api-a758.onrender.com/";
 
@@ -13,13 +14,14 @@ const Projects = ({ projects }) => {
               <div className={styles.descriptionWrapper}>
                 <h2 className={styles.projectTitle}>{name}</h2>
                 <p className={styles.techs}>
-                  <span className={styles.techTitle}>Technologies:</span>{" "}
+                  <span className={styles.techTitle}>Technologies:</span>
                   {techs}
                 </p>
                 <div className={styles.descriptionContainer}>
                   <p className={styles.description}>{descr}</p>
                 </div>
               </div>
+              <DetailsBtn projectId={_id} />
             </li>
           ))}
       </ul>

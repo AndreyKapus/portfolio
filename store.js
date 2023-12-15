@@ -49,6 +49,7 @@ export const useProjects = create((set, get) => ({
   project: null,
   loading: false,
   error: null,
+  photo: null,
 
   addProject: async (event) => {
     set({ loading: true });
@@ -64,6 +65,25 @@ export const useProjects = create((set, get) => ({
       set({ error: error.massege });
     } finally {
       set({ loading: false });
+    }
+  },
+
+  updatePhoto: async (formData, { projectId }) => {
+    set({ loading: true });
+
+    try {
+      const res = await axios.patch(
+        `api/projects/avatars/${projectId}`,
+        formData
+      );
+      const data = await res.json();
+      set({ photo: data });
+    } catch (error) {
+      return error.massege;
+    } finally {
+      set({
+        loading: false,
+      });
     }
   },
 }));

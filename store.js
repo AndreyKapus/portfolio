@@ -70,12 +70,13 @@ export const useProjects = create((set, get) => ({
 
   updatePhoto: async (formData, { projectId }) => {
     set({ loading: true });
-
+    console.log("form data", formData);
     try {
       const res = await axios.patch(
         `api/projects/avatars/${projectId}`,
         formData
       );
+
       const data = await res.json();
       set({ photo: data });
     } catch (error) {

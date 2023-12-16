@@ -6,12 +6,14 @@ import { useProjects } from "../store";
 const EdivAvatar = (projectId) => {
   const [selectedPhoto, setSelectedPhoto] = useState(null);
   // const [id, setId] = useState(null);
+  // console.log("selected photo", selectedPhoto);
 
   const uploadFile = useProjects((state) => state.updatePhoto);
 
   const handleChange = (e) => {
     const file = e.target.files;
     setSelectedPhoto(file);
+    // console.log("file", file);
   };
 
   const handleSubmit = (e) => {
@@ -24,7 +26,7 @@ const EdivAvatar = (projectId) => {
 
     const formData = new FormData();
     formData.append("avatar", selectedPhoto);
-    console.log(formData);
+    // console.log(formData);
     uploadFile(formData, projectId);
   };
 

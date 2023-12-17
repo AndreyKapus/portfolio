@@ -25,8 +25,7 @@ const EdivAvatar = (projectId) => {
     }
 
     const formData = new FormData();
-    formData.append("avatar", selectedPhoto);
-    // console.log(formData);
+    formData.append("file", selectedPhoto);
     uploadFile(formData, projectId);
   };
 
@@ -34,7 +33,7 @@ const EdivAvatar = (projectId) => {
     <form className={styles.editPhotoForm} onSubmit={handleSubmit}>
       {!selectedPhoto ? (
         <div>
-          <label for="editPrhoto" className={styles.editLabel}>
+          <label htmlFor="editPrhoto" className={styles.editLabel}>
             <CiEdit />
           </label>
           <input
@@ -42,7 +41,7 @@ const EdivAvatar = (projectId) => {
             type="file"
             id="editPrhoto"
             className={styles.editPhotoInput}
-            accept=".jpg, .jpeg, .png"
+            accept="image/*, .jpg, .jpeg, .png"
           />
         </div>
       ) : (

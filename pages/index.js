@@ -2,6 +2,7 @@ import Link from "next/link";
 import Head from "next/head";
 import Layout from "../Components/layout";
 import ProjectsList from "./ProjectsList/ProjectsList";
+import axios from "axios";
 
 export async function getStaticProps() {
   const res = await fetch(

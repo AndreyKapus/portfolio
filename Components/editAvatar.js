@@ -11,9 +11,11 @@ const EdivAvatar = (projectId) => {
   const uploadFile = useProjects((state) => state.updatePhoto);
 
   const handleChange = (e) => {
-    const file = e.target.files;
-    setSelectedPhoto(file);
-    // console.log("file", file);
+    const input = e.target.files;
+
+    const file = input[0];
+    setSelectedPhoto(input);
+    // console.log("file", file.name);
   };
 
   const handleSubmit = (e) => {
@@ -25,7 +27,7 @@ const EdivAvatar = (projectId) => {
     }
 
     const formData = new FormData();
-    formData.append("file", selectedPhoto);
+    formData.append("avatar", selectedPhoto);
     uploadFile(formData, projectId);
   };
 
@@ -39,6 +41,7 @@ const EdivAvatar = (projectId) => {
           <input
             onChange={handleChange}
             type="file"
+            name="file"
             id="editPrhoto"
             className={styles.editPhotoInput}
             accept="image/*, .jpg, .jpeg, .png"

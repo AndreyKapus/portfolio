@@ -14,8 +14,8 @@ const EdivAvatar = (projectId) => {
     const input = e.target.files;
 
     const file = input[0];
-    setSelectedPhoto(input);
-    // console.log("file", file.name);
+    setSelectedPhoto(file);
+    console.log("file", input);
   };
 
   const handleSubmit = (e) => {

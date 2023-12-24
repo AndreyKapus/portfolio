@@ -5,10 +5,10 @@ import ProjectsList from "./ProjectsList/ProjectsList";
 import axios from "axios";
 
 export async function getStaticProps() {
-  const res = await fetch(
+  const res = await axios.get(
     "https://portfolio-api-a758.onrender.com/api/projects"
   );
-  const projects = await res.json();
+  const projects = res.data;
 
   return {
     props: { projects },

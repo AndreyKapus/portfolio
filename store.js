@@ -26,9 +26,9 @@ export const useAuth = create(
         try {
           const { data } = await axios.post("api/auth/login", event);
 
-          // if (!data.ok) {
-          //   throw new Error("Someting went wrong (");
-          // }
+          if (!data.ok) {
+            throw new Error("Someting went wrong (");
+          }
           set({ user: data, error: null });
           token.setToken(data.token);
         } catch (error) {

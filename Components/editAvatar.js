@@ -5,8 +5,6 @@ import { useProjects } from "../store";
 
 const EdivAvatar = (projectId) => {
   const [selectedPhoto, setSelectedPhoto] = useState(null);
-  // const [id, setId] = useState(null);
-  // console.log("selected photo", selectedPhoto);
 
   const uploadFile = useProjects((state) => state.updatePhoto);
 

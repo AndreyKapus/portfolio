@@ -13,7 +13,6 @@ const EdivAvatar = (projectId) => {
 
     const file = input[0];
     setSelectedPhoto(file);
-    console.log("file", input);
   };
 
   const handleSubmit = (e) => {

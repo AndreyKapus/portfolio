@@ -1,4 +1,3 @@
-import { useState } from "react";
 import styles from "../styles/components/projects.module.css";
 import DetailsBtn from "./detailsBtn";
 import EdivAvatar from "./editAvatar";
@@ -6,8 +5,6 @@ import EdivAvatar from "./editAvatar";
 const dir = "https://portfolio-api-a758.onrender.com/";
 
 const Projects = ({ projects }) => {
-  const [avatarId, setAvatarId] = useState("");
-
   return (
     <div className={styles.projectsContainer}>
       <ul className={styles.projectsList}>

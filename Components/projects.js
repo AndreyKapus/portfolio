@@ -12,7 +12,9 @@ const Projects = ({ projects }) => {
           projects.map(({ _id, img, name, techs, descr, team, avatarUrl }) => (
             <li key={_id} className={styles.listItem}>
               <EdivAvatar projectId={_id} />
-              <img src={`${dir}${avatarUrl}`} className={styles.projectImg} />
+              <div className={styles.imgWrapper}>
+                <img src={`${dir}${avatarUrl}`} className={styles.projectImg} />
+              </div>
               <div className={styles.descriptionWrapper}>
                 <h2 className={styles.projectTitle}>{name}</h2>
                 <p className={styles.techs}>

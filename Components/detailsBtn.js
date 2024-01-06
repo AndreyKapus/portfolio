@@ -9,7 +9,7 @@ const DetailsBtn = ({ projectId }) => {
   return (
     <>
       <button type="button" id={projectId} onClick={loadMoreBtnClick}>
-        See more...
+        more...
       </button>
     </>
   );

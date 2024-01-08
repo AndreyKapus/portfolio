@@ -11,7 +11,6 @@ const DetailsBtn = ({ projectId }) => {
       <button type="button" id={projectId} onClick={loadMoreBtnClick}>
         more...
       </button>
-      <button type="button">edit</button>
     </>
   );
 };

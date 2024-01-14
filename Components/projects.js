@@ -24,6 +24,7 @@ const Projects = ({ projects }) => {
                 <div className={styles.descriptionContainer}>
                   <p className={styles.description}>{descr}</p>
                 </div>
+                <div>{team ? <p>Team project</p> : <p>Individual</p>}</div>
               </div>
               <DetailsBtn projectId={_id} />
             </li>

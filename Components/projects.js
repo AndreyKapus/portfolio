@@ -1,4 +1,5 @@
 import styles from "../styles/components/projects.module.css";
+import DeleteBtn from "./deleteBtn";
 import DetailsBtn from "./detailsBtn";
 import EdivAvatar from "./editAvatar";
 
@@ -27,6 +28,7 @@ const Projects = ({ projects }) => {
                 <div>{team ? <p>Team project</p> : <p>Individual</p>}</div>
               </div>
               <DetailsBtn projectId={_id} />
+              <DeleteBtn />
             </li>
           ))}
       </ul>

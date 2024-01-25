@@ -1,7 +1,7 @@
-const DeleteBtn = () => {
+const DeleteBtn = (projectId) => {
   return (
     <div>
-      <button>Del</button>
+      <button type="button">Del</button>
     </div>
   );
 };

@@ -28,7 +28,7 @@ const Projects = ({ projects }) => {
                 <div>{team ? <p>Team project</p> : <p>Individual</p>}</div>
               </div>
               <DetailsBtn projectId={_id} />
-              <DeleteBtn />
+              <DeleteBtn projectId={_id} />
             </li>
           ))}
       </ul>

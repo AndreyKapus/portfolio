@@ -68,6 +68,22 @@ export const useProjects = create((set, get) => ({
     }
   },
 
+  deleteProject: async (projectId) => {
+    set({ loading: true });
+
+    try {
+      const { data } = await axios.delete(`api/projects/${projectId}`);
+
+      if (!data.ok) {
+        throw new Error("Someting went wrong (");
+      }
+    } catch (error) {
+      set({ error: error.massege });
+    } finally {
+      set({ loading: false });
+    }
+  },
+
   updatePhoto: async (formData, { projectId }) => {
     set({ loading: true });
     try {

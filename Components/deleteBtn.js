@@ -1,7 +1,13 @@
-const DeleteBtn = (projectId) => {
+import { useProjects } from "../store";
+
+const DeleteBtn = ({ projectId }) => {
+  const useDelete = useProjects((state) => state.deleteProject);
+
   return (
     <div>
-      <button type="button">Del</button>
+      <button type="button" onClick={() => useDelete(projectId)}>
+        Del
+      </button>
     </div>
   );
 };

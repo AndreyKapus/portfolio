@@ -26,11 +26,12 @@ export const useAuth = create(
         try {
           const { data } = await axios.post("api/auth/login", event);
 
-          if (!data.ok) {
-            throw new Error("Someting went wrong (");
-          }
+          // if (!data.ok) {
+          //   throw new Error("Someting went wrong (");
+          // }
           set({ user: data, error: null });
           token.setToken(data.token);
+          console.log(axios.defaults.headers.common.Authorization);
         } catch (error) {
           set({ error: error.massege });
         } finally {
@@ -74,9 +75,9 @@ export const useProjects = create((set, get) => ({
     try {
       const { data } = await axios.delete(`api/projects/${projectId}`);
 
-      if (!data.ok) {
-        throw new Error("Someting went wrong (");
-      }
+      // if (!data.ok) {
+      //   throw new Error("Someting went wrong (");
+      // }
     } catch (error) {
       set({ error: error.massege });
     } finally {

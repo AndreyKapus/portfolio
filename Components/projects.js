@@ -2,6 +2,7 @@ import styles from "../styles/components/projects.module.css";
 import DeleteBtn from "./deleteBtn";
 import DetailsBtn from "./detailsBtn";
 import EdivAvatar from "./editAvatar";
+import ProjectDescr from "./projectDescr";
 
 const dir = "https://portfolio-api-a758.onrender.com/";
 
@@ -22,13 +23,7 @@ const Projects = ({ projects }) => {
                   <span className={styles.techTitle}>Technologies:</span>
                   {techs}
                 </p>
-                <div className={styles.descriptionContainer}>
-                  {descr.length > 200 ? (
-                    <p className={styles.continue}>{descr}</p>
-                  ) : (
-                    <p className={styles.description}>{descr}</p>
-                  )}
-                </div>
+                <ProjectDescr descr={descr} />
                 <div>{team ? <p>Team project</p> : <p>Individual</p>}</div>
               </div>
               <DetailsBtn projectId={_id} />

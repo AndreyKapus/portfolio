@@ -23,7 +23,11 @@ const Projects = ({ projects }) => {
                   {techs}
                 </p>
                 <div className={styles.descriptionContainer}>
-                  <p className={styles.description}>{descr}</p>
+                  {descr.length > 200 ? (
+                    <p className={styles.continue}>{descr}</p>
+                  ) : (
+                    <p className={styles.description}>{descr}</p>
+                  )}
                 </div>
                 <div>{team ? <p>Team project</p> : <p>Individual</p>}</div>
               </div>

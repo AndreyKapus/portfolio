@@ -1,6 +1,6 @@
 import { create } from "zustand";
-import { persist, createJSONStorage } from "zustand/middleware";
 import axios from "axios";
+import { persist, createJSONStorage } from "zustand/middleware";
 
 axios.defaults.baseURL = "https://portfolio-api-a758.onrender.com/";
 
@@ -31,7 +31,6 @@ export const useAuth = create(
           // }
           set({ user: data, error: null });
           token.setToken(data.token);
-          console.log(axios.defaults.headers.common.Authorization);
         } catch (error) {
           set({ error: error.massege });
         } finally {

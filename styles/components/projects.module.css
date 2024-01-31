@@ -64,6 +64,12 @@
   overflow: hidden;
 }
 
+.typeWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .continue:after {
   /* многоточие в конце */
   content: "…";

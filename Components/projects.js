@@ -3,6 +3,7 @@ import DeleteBtn from "./deleteBtn";
 import DetailsBtn from "./detailsBtn";
 import EdivAvatar from "./editAvatar";
 import ProjectDescr from "./projectDescr";
+import { GiTeamIdea } from "react-icons/gi";
 
 const dir = "https://portfolio-api-a758.onrender.com/";
 
@@ -24,7 +25,16 @@ const Projects = ({ projects }) => {
                   {techs}
                 </p>
                 <ProjectDescr descr={descr} />
-                <div>{team ? <p>Team project</p> : <p>Individual</p>}</div>
+                <div>
+                  {team ? (
+                    <div className={styles.typeWrapper}>
+                      <p>Team project</p>
+                      <GiTeamIdea />
+                    </div>
+                  ) : (
+                    <p>Individual</p>
+                  )}
+                </div>
               </div>
               <DetailsBtn projectId={_id} />
               <DeleteBtn projectId={_id} />

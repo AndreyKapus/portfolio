@@ -32,7 +32,7 @@ const Projects = ({ projects }) => {
                       <GiTeamIdea />
                     </div>
                   ) : (
-                    <p>Individual</p>
+                    <p>Individ</p>
                   )}
                 </div>
               </div>
